@@ -1,7 +1,7 @@
 @echo off
 
 set item=
-set dest=D:\BACKUPStesttar
+set dest=
 set srce=
 
 echo "|| Backing up %item%... ||"
