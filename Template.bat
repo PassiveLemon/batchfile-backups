@@ -1,7 +1,7 @@
 @echo off
 
 set item=
-set dest=D:\TESTUPS
+set dest=D:\BACKUPS
 set srce=
 
 call Backuper.bat
