@@ -17,44 +17,32 @@ if not exist "%dest%\%item%\" (
 	echo "|| Directory made. ||"
 )
 
-echo "|| Making temporary directory and copying to... ||"
-	mkdir "%dest%\%item%temp\"
-	xcopy /Y /s "%srce%\" "%dest%\%item%temp\"
-
 echo "|| Archiving... ||"
-	tar -cf "%dest%\%item%\%item%.tar" "%dest%\%item%temp"
+	"C:\Program Files\7-Zip\7z.exe" a -t7z "%dest%\%item%\%item%.7z" "%srce%\*.*" -r
 
-echo "|| Deleting temporary directory... ||"
-	rmdir /s /q "%dest%\%item%temp\"
-
-if exist "%dest%\%item%\%item%3.tar" (
+if exist "%dest%\%item%\%item%3.7z" (
 	echo "|| Removing oldest backup ||"
-	del /Q "%dest%\%item%\%item%3.tar"
+	del /Q "%dest%\%item%\%item%3.7z"
 )
 
-if exist "%dest%\%item%\%item%2.tar" (
+if exist "%dest%\%item%\%item%2.7z" (
 	echo "|| Move 2 to 3 ||"
-	ren "%dest%\%item%\%item%2.tar" "%item%3.tar"
+	ren "%dest%\%item%\%item%2.7z" "%item%3.7z"
 )
 
-if exist "%dest%\%item%\%item%1.tar" (
+if exist "%dest%\%item%\%item%1.7z" (
 	echo "|| Move 1 to 2 ||"
-	ren "%dest%\%item%\%item%1.tar" "%item%2.tar"
+	ren "%dest%\%item%\%item%1.7z" "%item%2.7z"
 )
 
-if exist "%dest%\%item%\%item%.tar" (
+if exist "%dest%\%item%\%item%.7z" (
 	echo "|| Move new backup to 1 ||"
-	ren "%dest%\%item%\%item%.tar" "%item%1.tar"
+	ren "%dest%\%item%\%item%.7z" "%item%1.7z"
 )
 
-if exist "%dest%\%item%\%item%.tar" (
-	echo "|| Removing %item%.tar. This shouldn't happen. Check your entries. ||"
-	del /Q "%dest%\%item%\%item%.tar"
-)
-
-if exist "%dest%\%item%temp\" (
-	echo "|| Removing %item%temp\. This shouldn't happen. Check your entries. ||"
-	rmdir /s /q "%dest%\%item%temp\"
+if exist "%dest%\%item%\%item%.7z" (
+	echo "|| Removing %item%.7z. This shouldn't happen. Check your entries. ||"
+	del /Q "%dest%\%item%\%item%.7z"
 )
 
 echo "|| Successfully backed up %item% ||"
