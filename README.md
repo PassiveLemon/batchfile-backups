@@ -1,5 +1,6 @@
 # batchfile-backups </br>
-Backups using batch file </br>
+Backups using batch file. </br>
+Requires 7zip. </br>
 After given a source directory, this will create an archive of your source at a desired location. Stores 3 backups but you can easily add more if you want. Automatically removes oldest backup. Older backups have increasing numbers with the youngest being 1. Same thing happens with the log file. It will ignore empty/non-existant directories. </br>
 
 # Usage </br>
