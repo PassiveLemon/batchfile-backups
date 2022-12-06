@@ -21,5 +21,9 @@ For each item's bat file, put the name at the top and the source (The directory 
 
 To have it done automatically, use Task Scheduler or a program of your choice and have it run Starter.bat. This is what automatically runs all of the subscripts and creates the logs. </br>
 
-#### TO ADD:
-- Handling for individual files that are seperate from "save directories".
+## TODO:
+Cause: Handling for individual files that are seperate from "save directories" </br>
+Effect: If a save file is in the top directory of the program itself, it won't copy the entire thing </br>
+
+Cause: Convert to Powershell </br.
+Effect: I hate Batch file and it will be much easier to update </br>
