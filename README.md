@@ -25,5 +25,5 @@ To have it done automatically, use Task Scheduler or a program of your choice an
 Cause: Handling for individual files that are seperate from "save directories" </br>
 Effect: If a save file is in the top directory of the program itself, it won't copy the entire thing </br>
 
-Cause: Convert to Powershell </br.
+Cause: Convert to Powershell. </br>
 Effect: I hate Batch file and it will be much easier to update </br>
