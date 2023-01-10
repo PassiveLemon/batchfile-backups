@@ -1,4 +1,5 @@
 # batchfile-backups </br>
+# <b>DISCONTINUED. I no longer use Windows.</b> </br>
 Backups using batch file. </br>
 After given a source directory, this will create a 7z of your source at a desired location.</br>
 
@@ -20,10 +21,3 @@ Change the name to `item-(whatever you want).bat` </br>
 For each item's bat file, put the name at the top and the source (The directory that you want to backup. DO NOT ADD A \ TO THE END. Example file included. </br>
 
 To have it done automatically, use Task Scheduler or a program of your choice and have it run Starter.bat. This is what automatically runs all of the subscripts and creates the logs. </br>
-
-## TODO:
-Cause: Handling for individual files that are seperate from "save directories" </br>
-Effect: If a save file is in the top directory of the program itself, it won't copy the entire thing </br>
-
-Cause: Convert to Powershell. </br>
-Effect: I hate Batch file and it will be much easier to update </br>
